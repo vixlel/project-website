@@ -49,47 +49,6 @@
 
         <center><h1 style="font-family: Oswald, sans-serif;">Mocha Mocha Shop</h1></center>
 
-        <script>
-            var incrementButton = document.getElementsByClassName('inc-button');
-            var decrementButton = document.getElementsByClassName('dec-button');
-            //console.log(incrementButton);
-            //console.log(decrementButton);
-            for(var i = 0; i < incrementButton.length; i++){
-                var button = incrementButton[i];
-                button.addEventListener('click',function(event){
-                    var buttonClicked = event.target;
-                    //console.log(buttonClicked);
-                    var input = buttonClicked.parentElement.children[2];
-                    //console.log(input);
-                    var inputValue = input.value;
-                    //console.log(inputValue);
-                    var newValue = parseInt(inputValue) + 1;
-                    //console.log(newValue);
-                    input.value = newValue;
-                })
-            }
-
-            for(var i = 0; i < decrementButton.length; i++){
-                var button = decrementButton[i];
-                button.addEventListener('click',function(event){
-                    var buttonClicked = event.target;
-                    //console.log(buttonClicked);
-                    var input = buttonClicked.parentElement.children[2];
-                    //console.log(input);
-                    var inputValue = input.value;
-                    //console.log(inputValue);
-                    var newValue = parseInt(inputValue) - 1;
-                    //console.log(newValue);
-                    if(newValue >= 0){
-                        input.value = newValue;
-                    }
-                    else{
-                        input.value=0;
-                        //alert('QTY CAN NOT BE LESS THAN ZERO');
-                    }
-                })
-            }
-        </script>
 
         <div class="product">
 
@@ -98,21 +57,11 @@
                 <img class="thumbnail-product" src="Picture/Hoodie02.webp">
                 <p class="info-product">Áo Hoodie BlackZ - 399.000Đ</p>
                 <button class="btn-mua">Buy Now &#128722;</button>
-                <div class="box">
-                    <div class="dec-button">-</div>
-                    <input type="text" name="_qty_" id="1" value="0" class="input-field">
-                    <div class="inc-button">+</div>
-                </div>
             </div>
             <div class="overview">
                 <img class="thumbnail-product" src="Picture/Hoodie03.webp">
                 <p class="info-product">Áo thun Monchi - 399.000Đ</p>
                 <button class="btn-mua">Buy Now &#128722;</button>
-                <div class="box">
-                    <div class="dec-button button">-</div>
-                    <input type="text" name="_qty_" id="2" value="0" class="input-field">
-                    <div class="inc-button button">+</div>
-                </div>
             </div>
             <div class="overview">
                 <img class="thumbnail-product" src="Picture/Hoodie04.webp">
