@@ -43,7 +43,7 @@
     display: flex;
     flex: 1;
     align-items: center;
-    max-width: 500px;
+    max-width: 480px;
 }
 
 .search-bar{
@@ -80,7 +80,7 @@
     flex-shrink: 0; /* No shrink */
 }
 
-.log-in, .log-out{
+.log-out-btn{
     width: 80px;
     font-family: Oswald, sans-serif;
     font-size: 18px;
@@ -93,10 +93,10 @@
     cursor: pointer;
 }
 
-.log-in:hover, .log-out:hover{
+.log-out-btn:hover{
     box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.4);
 }
 
-.log-in:active, .log-out:active{
+.log-out-btn:active{
     background-color: #c6c6c6;
 }

@@ -1,0 +1,162 @@
+<?php
+session_start();
+
+
+if(!isset($_SESSION["username"]))
+{
+	header("location:index.php");
+}
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <title>Mocha Mocha Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+        <link rel="stylesheet" href="styles/product.css">
+        <link rel="stylesheet" href="styles/quantity.css">
+        <style>
+        .log-out-btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin-right: 20px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .chinhsua{
+            font-size: 16px;
+            background-color: skyblue;
+            font-family: 'Oswald', sans-serif;
+        }
+        </style>
+        <!-- <link rel="stylesheet" href="styles/link.css"> -->
+    </head>
+
+    <body>
+       
+        <div class="header">
+            <div class="left-section">
+                <a href="userhome.php"><button class="Phu-kien" type="button">Home</button></a>
+                <a href="Ao.html"><button class="Ao" type="button">Áo Hoodie</button></a>
+                <a href="Quan.html"><button class="Quan" type="button">Quần Cargo</button></a>
+                <a href="Giay.html"><button class="Giay" type="button">Giày Sport</button></a>
+                <a href="PhuKien.html"><button class="Phu-kien" type="button">Phụ kiện khác</button></a>
+            </div>
+
+            <div class="middle-section">
+                <input class="search-bar" type="text" placeholder="&#128269; Search">
+            </div>
+
+            <div class="right-section">
+                <a href="logout.php"><button class="log-out-btn" type="button">Log out</button></a>
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <button class="btn-sidebar" type="button">Trang chủ</button>
+            <button class="btn-sidebar" type="button">Sản phẩm mới</button>
+            <button class="btn-sidebar" type="button">Collection</button>
+            <button class="btn-sidebar" type="button">Dịch vụ tư vấn</button>
+            <button class="btn-sidebar" type="button">Dịch vụ giao hàng</button>
+            <button class="btn-sidebar" type="button">Đánh giá</button>
+        </div>
+
+
+        <center><h1 style="font-family: Oswald, sans-serif;">Mocha Mocha Shop</h1></center>
+        <div class="product">
+            
+            <!--Áo-->
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Hoodie02.webp">
+                <p class="info-product">Áo Hoodie BlackZ - 399.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công!')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Hoodie03.webp">
+                <p class="info-product">Áo thun Monchi - 399.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Hoodie04.webp">
+                <p class="info-product">Áo thun hoạt ảnh - 399.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+
+            <!--Quần-->
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Cargo01.jpg">
+                <p class="info-product">Steel Heel Paints - 599.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Cargo02.jpg">
+                <p class="info-product">Khaki Paints Mocha - 499.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Cargo03.jpg">
+                <p class="info-product">Khaki Panits Beige - 499.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+
+            <!--Giày-->
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Giay04.jpg">
+                <p class="info-product">Nike Air Max 1 - 2.500.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Giay02.jpg">
+                <p class="info-product">Nike Air Max Excee - 2.699.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/Giay03.jpg">
+                <p class="info-product">Just In - 2.769.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+
+            <!--Phụ Kiện-->
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/PhuKien01.webp">
+                <p class="info-product">Orient SK RA-AA - 8.799.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/PhuKien02.webp">
+                <p class="info-product">Casio MTP - 1381L  - 2.769.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/PhuKien04.webp">
+                <p class="info-product">Thắt lưng Leather - 400.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/PhuKien05.png">
+                <p class="info-product">Vòng tay Bạc Ý - 4.000.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/PhuKien06.png">
+                <p class="info-product">Vòng tay Trắng Ý - 7.599.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+            <div class="overview">
+                <img class="thumbnail-product" src="Picture/PhuKien07.png">
+                <p class="info-product">Vòng cổ  PNJSilver - 3.260.000Đ</p>
+                <button class="btn-mua" type="button" onclick="window.alert('Mua hàng thành công')">Buy Now &#128722;</button>
+            </div>
+        </div>
+    </body>
+</html>
+
